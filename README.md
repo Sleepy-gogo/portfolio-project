@@ -2,7 +2,7 @@
 
 This project has been made with [Astro](https://astro.build/), TailwindCSS and TypeScript. It's still under development, so expect bugs and issues.
 
-Any feedback is welcome, and please don't hesitate to [open an issue](https://github.com/withastro/astro/issues/new) if you have any.
+Any feedback is welcome, and please don't hesitate to [open an issue](https://github.com/Sleepy-gogo/portfolio-project/issues/new) if you have any.
 
 ## After cloning
 
