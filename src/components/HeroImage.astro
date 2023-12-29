@@ -1,0 +1,70 @@
+<div class="relative overflow-hidden">
+  <img class="rounded-[47.5%] drag-image" src="/placeholder.png" alt="Dude on a computer">
+  <img class="w-12 absolute drag-pointer aspect-square" src="pointer.png" alt="Mouse pointer">
+</div>
+
+<style>
+  .drag-image {
+    animation: movingImage 2s ease-in-out forwards;
+    animation-delay: 1s;
+    transform: translateX(110%);
+  }
+
+  .drag-pointer {
+    bottom: 0;
+    right: 0;
+    scale: 1;
+    transform: translateX(210%);
+    animation: movingPointer 2s ease-in-out forwards;
+    animation-delay: 1s;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .drag-image,
+    .drag-pointer {
+      animation: none;
+    }
+
+    .drag-image {
+      transform: translateX(0);
+    }
+
+    .drag-pointer {
+      transform: translateX(-150%);
+      scale: 1.2;
+    }
+  }
+
+  @keyframes movingPointer {
+    20% {
+      transform: translateX(210%);
+    }
+    45% {
+      scale: 1;
+    }
+    60% {
+      transform: translateX(-190%);
+      scale: 1.2;
+    }
+    80% {
+      transform: translateX(-190%);
+    }
+    100% {
+      transform: translateX(-150%);
+      scale: 1.2;
+    }
+  }
+
+  @keyframes movingImage {
+    20% {
+      transform: translateX(110%);
+    }
+    60% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+</style>

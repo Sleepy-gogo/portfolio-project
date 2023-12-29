@@ -1,10 +1,78 @@
 ---
+import HeroImage from '@/components/HeroImage.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Axel's Portfolio">
-	
+	<main id="hero" class="flex justify-between items-center min-h-screen px-4 relative overflow-hidden">
+		<div class="overlay"></div>
+		<div class="top-left-gradient"></div>
+  	<div class="bottom-right-gradient"></div>
+
+		<div class="select-none z-10">
+			<p class="text-2xl text-[#100E23] bg-[#91DDFF] inline ml-1 pl-3 pr-1 py-1 rounded-l-full tag">Hi@My-name-is</p>
+			<h1 class="my-2 text-[100px] title -ml-2 italic tracking-tight leading-[.85] font-extrabold"><span class="pl-3">AXEL</span><br/>CASTAÑO</h1>
+			<p class="text-[#ACB0BE]">~/Frontend-Developer: <span class="text-[#5BAA6C]">and</span> <span class="text-[#656870]">--your</span> problem-solver</p>
+		</div>
+		<HeroImage />
+	</main>
 </Layout>
 
 <style>
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url('/pattern.png'), radial-gradient(circle, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 1));
+  	background-size: 300px, cover;
+		opacity: 0.10;
+		z-index: -20;
+	}
+
+	.title {
+		font-family: 'Montserrat Variable', sans-serif;
+	}
+
+	.tag{
+		position: relative;
+	}
+
+	.tag::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%) translateX(100%);
+		width: 0;
+		height: 0;
+		border-top: 21px solid transparent;
+		border-bottom: 21px solid transparent;
+		border-left: 20px solid #91DDFF;
+	}
+
+	.top-left-gradient,
+	.bottom-right-gradient {
+		position: absolute;
+		width: 50px;
+		height: 10px;
+		border-radius: 100%;
+		pointer-events: none;
+		z-index: -10;
+	}
+
+	.top-left-gradient {
+		top: -60vh;
+		left: 14vw; 
+		box-shadow: 0 0 180px 400px #5165AB;
+		opacity: 0.7;
+	}
+
+	.bottom-right-gradient {
+		bottom: -45vh;
+		right: -10vw; 
+		box-shadow: 0 0 180px 300px #594288;
+		opacity: 0.9;
+	}
 </style>
