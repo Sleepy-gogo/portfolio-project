@@ -11,7 +11,7 @@ Run `npm install` (Or any other npm alternative equivalent) and `npm run dev` to
 ## Planned additions
 
 - Save contact messages on Turso
-- Blog section
-- CMS for blog posts
 - Improve responsivness
 - Add more projects
+- Add contact form
+- Add social links
