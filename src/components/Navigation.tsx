@@ -3,7 +3,7 @@ import RoundedButton from './RoundedButton';
 import { useState } from 'react';
 
 function Navigation() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   return (
     <>
       <button
