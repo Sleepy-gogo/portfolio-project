@@ -1,14 +1,11 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "baseUrl": "/run/media/axel/Archivos/Proyectos/Code/webdev/Astro/portfolio-project",
+    "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@components/*": [
-        "./src/components/*"
-      ]
+      "@/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@icons/*": ["./src/icons/*"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"
